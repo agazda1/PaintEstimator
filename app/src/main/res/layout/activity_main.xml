@@ -1,18 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/paintbackground"
     tools:context="edu.orangecoastcollege.cs273.agazda1.paintestimator.MainActivity">
 
+
     <TextView
+        android:id="@+id/TitleLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/directionsLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/TitleLabelTextView"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/length_LabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/directionsLabelTextView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="200dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/widthLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/length_LabelTextView"
+        android:layout_alignLeft="@id/length_LabelTextView"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/heightLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/widthLabelTextView"
+        android:layout_alignLeft="@id/widthLabelTextView"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/lengthEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignTop="@id/length_LabelTextView"
+        android:layout_marginLeft="400dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/widthEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/widthLabelTextView"
+        android:layout_marginLeft="400dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="400dp"
+        android:layout_alignTop="@id/heightLabelTextView"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/questionLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heightLabelTextView"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/doorsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/questionLabelTextView"
+        android:layout_alignLeft="@id/length_LabelTextView"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/windowsTextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/length_LabelTextView"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doorsTextView"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/doorEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/windowEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/gallonButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="computeGallons"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToHelp"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/gallonsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+</RelativeLayout>
